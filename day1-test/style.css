@@ -23,8 +23,9 @@ a:hover {
   color: #0a58ca;      /* slightly brighter on hover */
 }
 .projects {
-  display: grid;                 /* grid = nice rows/columns */
-  gap: 16px;                     /* space between cards */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
   margin: 12px 0;
 }
 
@@ -47,3 +48,23 @@ a:hover {
   display: inline-block;
   margin-top: 6px;
 }
+.about-container {
+  display: flex;           /* puts items side by side */
+  align-items: center;     /* vertically align them */
+  gap: 20px;               /* space between photo and text */
+}
+
+.about-container img {
+  border-radius: 12px;
+  max-width: 150px;        /* keeps it tidy */
+}
+.about-text ul,
+.about-text p {
+  margin: 0;        /* remove extra spacing */
+  padding: 0;
+}
+
+.about-text p {
+  margin-top: 8px;  /* add a small gap below list */
+}
+
